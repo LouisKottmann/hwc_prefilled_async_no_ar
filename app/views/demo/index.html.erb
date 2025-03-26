@@ -1,0 +1,10 @@
+<h1>Demo#index</h1>
+<p>Find me in app/views/demo/index.html.erb</p>
+
+<%= form_with url: demo_index_path, method: :get do |f| %>
+  <%= f.combobox :selected_company_id,
+                     demo_combo_async_options_path,
+                     value: params[:selected_company_id],
+                     placeholder: "Select a company" %>
+  <%= f.submit %>
+<% end %>
